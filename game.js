@@ -16,7 +16,7 @@ $(document).on("keypress",function(){
     }
 }); 
 
-//To use play button 
+//To use play button other than keyboard
 $(".StButton").on("click",function(){
     if(!started){
         started=true;
