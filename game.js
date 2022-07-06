@@ -16,6 +16,14 @@ $(document).on("keypress",function(){
     }
 }); 
 
+//To use play button 
+$(".StButton").on("click",function(){
+    if(!started){
+        started=true;
+        nextSequence();
+    }
+})
+
 //To detect if any of the 4 buttons were clicked
 $(".btn").on("click",function(event){
     userChosenColour=event.target.id;
@@ -42,7 +50,7 @@ function checkAnswer(currentLevel){
         var v=setTimeout(function(){
             $("body").removeClass("game-over");
         },200);
-        $("h1").text("Game over! Press any key to restart");
+        $("h1").text("Game over! Press any key/start button to restart");
         startOver();
     }
 }
